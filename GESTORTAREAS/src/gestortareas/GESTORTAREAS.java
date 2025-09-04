@@ -31,7 +31,7 @@ public class GESTORTAREAS {
         StringBuilder b = new StringBuilder();
         b.append(mostrarT());
         b.append(cTareas + ".[]" + nombre);
-        
+
         w.write(b.toString());// en teoria seria 1.[]Nombre
         w.close();
 
@@ -56,6 +56,7 @@ public class GESTORTAREAS {
     //Completar tareas seria tipo conseguir el texto entero y conseguir el numero y reemplazar esos chars con eso 
     private static void completarT(int numTarea) throws IOException {
         String ar = mostrarT();
+        System.out.println("No lo termine pipipi");
         for (int i = 0; i < ar.length(); i++) {
 
         }
