@@ -31,6 +31,7 @@ public class GESTORTAREAS {
         StringBuilder b = new StringBuilder();
         b.append(mostrarT());
         b.append(cTareas + ".[]" + nombre);
+        
         w.write(b.toString());// en teoria seria 1.[]Nombre
         w.close();
 
@@ -46,16 +47,6 @@ public class GESTORTAREAS {
         r.read(ar);
         for (int i = 0; i < file.length(); i++) {
             texto.append(ar[i]);
-        }
-        int c = 0;
-        int total = 0;
-        while ((c = r.read()) != -1) {
-            if (c == '\n') {
-                tareas[total++] = texto.toString();
-                texto.setLength(0);
-            } else {
-                texto.append((char) c);
-            }
         }
 
         return texto.toString();
