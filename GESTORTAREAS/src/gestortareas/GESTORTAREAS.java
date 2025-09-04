@@ -4,17 +4,13 @@
  */
 package gestortareas;
 
+import java.io.File;
+
 /**
  *
  * @author user
  */
 public class GESTORTAREAS {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    File file = new File("Tareas.txt");//Esto se va a poner en el src me imagino
     
 }
