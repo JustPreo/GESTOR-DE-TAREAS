@@ -21,18 +21,27 @@ public class GESTORTAREAS {
     static Scanner scanner = new Scanner(System.in).useDelimiter("\n");
 
     static int cTareas = 0;
-    
+
     //El formato sera cTareas. [] nombre 
     private static void agregarT(String nombre) throws IOException {
         cTareas++;
         FileWriter w = new FileWriter("Tareas.txt");
-        w.write(cTareas+".[]"+nombre);// en teoria seria 1.[]Nombre
-        
+        w.write(cTareas + ".[]" + nombre + "\n");// en teoria seria 1.[]Nombre
+        w.close();
 
     }
 
     private static void mostrarT() throws IOException {
         FileReader r = new FileReader("Tareas.txt");
+        char[] ar = new char[(int) file.length()];
+        
+        r.read(ar);
+        r.close();
+        
+        
+        System.out.println("====================");
+        System.out.println(ar);
+        System.out.println("====================");
 
     }
 
@@ -66,10 +75,13 @@ public class GESTORTAREAS {
                         agregarT(nTarea);
                         break;
                     case 2:
+                        mostrarT();
                         break;
                     case 3:
+                        completarT();
                         break;
                     case 4:
+                        System.exit(0);
                         break;
                     default:
                         break;
