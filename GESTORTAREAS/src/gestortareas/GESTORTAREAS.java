@@ -48,7 +48,7 @@ public class GESTORTAREAS {
         for (int i = 0; i < file.length(); i++) {
             texto.append(ar[i]);
         }
-
+        
         return texto.toString();
 
     }
@@ -73,7 +73,6 @@ public class GESTORTAREAS {
         try {
 
             while (true) {
-                System.out.println("Archivo tiene length:" + file.length());
                 initArchivo();
                 System.out.println("GESTOR DE TAREAS ");
                 System.out.println("====================");
