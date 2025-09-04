@@ -48,7 +48,7 @@ public class GESTORTAREAS {
         for (int i = 0; i < file.length(); i++) {
             texto.append(ar[i]);
         }
-        
+
         return texto.toString();
 
     }
